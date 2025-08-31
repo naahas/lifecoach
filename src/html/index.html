@@ -1,0 +1,704 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Coach: Training Hard - Coaching Sportif Premium</title>
+    <link href="index.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div id="app">
+        <!-- Navigation -->
+        <nav id="navbar">
+            <div class="nav-container">
+                <div @click="refreshMe()" class="logo">Life Coach</div>
+                <div class="nav-links" id="navLinks">
+                    <a href="#home">Accueil</a>
+                    <a href="#services">Services</a>
+                    <a href="#coach">Coach</a>
+                    <a href="#pricing">Tarifs</a>
+                    <a href="#testimonials">Témoignages</a>
+                    <a href="#booking" class="cta-button">Réserver</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-text fade-in">
+                    <h1>Transforme ton corps<br><span>Training Hard</span></h1>
+                    <p>Coaching sportif personnalisé pour atteindre tes objectifs. Méthode scientifique, résultats garantis.</p>
+                    <div class="hero-buttons">
+                        <a href="#booking" class="cta-button">Commencer maintenant</a>
+                        <a href="#services" class="secondary-button">Découvrir nos services</a>
+                    </div>
+                </div>
+                <div class="hero-video-container fade-in">
+                    <!-- Videos qui s'enchaînent -->
+                    <video class="hero-video active" muted playsinline>
+                        <source src="cvid1.mp4" type="video/mp4">
+                    </video>
+                    <video class="hero-video" muted playsinline>
+                        <source src="cvid2.mp4" type="video/mp4">
+                    </video>
+                    <video class="hero-video" muted playsinline>
+                        <source src="cvid3.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay"></div>
+                    <div class="video-dots">
+                        <span class="video-dot active" data-video="0"></span>
+                        <span class="video-dot" data-video="1"></span>
+                        <span class="video-dot" data-video="2"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="stats-container">
+                <div class="stat-item scroll-reveal">
+                    <div class="stat-number">60€</div>
+                    <div class="stat-label">Par séance</div>
+                </div>
+                <div class="stat-item scroll-reveal">
+                    <div class="stat-number">1h30</div>
+                    <div class="stat-label">Durée de séance</div>
+                </div>
+                <div class="stat-item scroll-reveal">
+                    <div class="stat-number">7j/7</div>
+                    <div class="stat-label">Disponibilité</div>
+                </div>
+                <div class="stat-item scroll-reveal">
+                    <div class="stat-number">IDF</div>
+                    <div class="stat-label">Toute l'Île-de-France</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="section-header scroll-reveal">
+                <h2>Nos Services</h2>
+                <p>Un accompagnement complet pour transformer ton corps et ton mindset</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card scroll-reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Coaching Individuel</h3>
+                    <p>Séances personnalisées adaptées à tes objectifs spécifiques. Programme sur-mesure pour des résultats optimaux.</p>
+                </div>
+                <div class="service-card scroll-reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Suivi de Progression</h3>
+                    <p>Analyse détaillée de tes performances et ajustements réguliers pour maximiser tes gains.</p>
+                </div>
+                <div class="service-card scroll-reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3>Conseils Nutrition</h3>
+                    <p>Plans alimentaires adaptés pour soutenir tes objectifs de transformation physique.</p>
+                </div>
+                <div class="service-card scroll-reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Préparation Mentale</h3>
+                    <p>Techniques de motivation et développement du mental pour dépasser tes limites.</p>
+                </div>
+                <div class="service-card scroll-reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Séances à Domicile</h3>
+                    <p>Je me déplace chez toi ou en extérieur dans toute l'Île-de-France.</p>
+                </div>
+                <div class="service-card scroll-reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Flexibilité Horaire</h3>
+                    <p>Disponible 6 jours sur 7 pour s'adapter à ton emploi du temps.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coach Profile -->
+        <section class="coach-profile" id="coach">
+            <div class="section-header scroll-reveal">
+                <h2>Votre Coach</h2>
+                <p>Un professionnel passionné dédié à votre transformation</p>
+            </div>
+            <div class="coach-container">
+                <div class="coach-image scroll-reveal">
+                    <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=800" alt="Coach sportif">
+                    <img src="coach1.jpg" alt="Coach sportif">
+                </div>
+                <div class="coach-info scroll-reveal">
+                    <h3>Jos</h3>
+                    <p class="coach-title">Coach Sportif Certifié - Spécialiste Transformation</p>
+                    <p class="coach-bio">
+                        Connu sous le nom de SportActif , Jos est un coach passionné qui à déjà accompragné des dizaines de personnes dizaines 
+                        de personnes dans leur transformation physique et mentale. Son approche repose essentielement sur trois piliers : Discipline ,
+                        Performance et résultats concrets.
+                    </p>
+                    <p class="coach-bio">
+                        Avec Jos, chaque séance est un pas de plus vers la meilleure version de toi-même.
+                        Rejoins l’expérience Life Coach et fais de ton corps ta plus grande réussite. La seule chose
+                         qui nous appartient dans ce monde, c'est notre corps que l'on entretient chaque jours
+                    </p>
+                    <div class="coach-features">
+                        <div class="feature-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Certifié</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Formation continue</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-users"></i>
+                            <span>+50 clients transformés</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-star"></i>
+                            <span>5/5 de satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing" id="pricing">
+            <div class="section-header scroll-reveal">
+                <h2>Nos Tarifs</h2>
+                <p>Des formules adaptées à tous les budgets</p>
+            </div>
+            <div class="pricing-cards">
+                <!-- <div class="pricing-card scroll-reveal">
+                    <h3 class="pricing-title">Séance Découverte</h3>
+                    <div class="pricing-price">45€</div>
+                    <p class="pricing-duration">1h30 d'essai</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Bilan complet</li>
+                        <li><i class="fas fa-check"></i> Définition des objectifs</li>
+                        <li><i class="fas fa-check"></i> Première séance</li>
+                        <li><i class="fas fa-check"></i> Plan d'action personnalisé</li>
+                    </ul>
+                    <a href="#booking" class="cta-button">Réserver</a>
+                </div> -->
+                <div class="pricing-card scroll-reveal">
+                    <h3 class="pricing-title">Séance Unitaire</h3>
+                    <div class="pricing-price">60€</div>
+                    <p class="pricing-duration">1h20</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Séance individuelle</li>
+                        <li><i class="fas fa-check"></i> Coaching personnalisé</li>
+                        <li><i class="fas fa-check"></i> Conseils nutrition</li>
+                        <li><i class="fas fa-check"></i> Flexibilité totale</li>
+                    </ul>
+                    <a href="#booking" class="cta-button">Réserver</a>
+                </div>
+                <div class="pricing-card featured scroll-reveal">
+                    <h3 class="pricing-title">Pack 10 Séances</h3>
+                    <div class="pricing-price">550€</div>
+                    <p class="pricing-duration">10 x 1h20</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 10 séances individuelles</li>
+                        <li><i class="fas fa-check"></i> Programme personnalisé</li>
+                        <li><i class="fas fa-check"></i> Suivi WhatsApp</li>
+                        <li><i class="fas fa-check"></i> Plan nutrition offert</li>
+                        <li><i class="fas fa-check"></i> -50€ d'économie</li>
+                    </ul>
+                    <a href="#booking" class="cta-button">Réserver</a>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials" id="testimonials">
+            <div class="section-header scroll-reveal">
+                <h2>Témoignages</h2>
+                <p>Ce que nos clients disent de nous</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card scroll-reveal">
+                    <span class="testimonial-quote">"</span>
+                    <p class="testimonial-text">
+                        "Alexandre m'a complètement transformé en 3 mois. J'ai perdu 12kg et je me sens enfin bien dans mon corps. 
+                        Sa méthode est efficace et il sait vraiment motiver !"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <h4>Julien D.</h4>
+                            <p>Objectif perte de poids</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card scroll-reveal">
+                    <span class="testimonial-quote">"</span>
+                    <p class="testimonial-text">
+                        "Les séances sont intenses mais adaptées à mon niveau. Alexandre est très professionnel et toujours ponctuel. 
+                        Je recommande à 100% !"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SL</div>
+                        <div class="author-info">
+                            <h4>Sophie L.</h4>
+                            <p>Remise en forme</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card scroll-reveal">
+                    <span class="testimonial-quote">"</span>
+                    <p class="testimonial-text">
+                        "Grâce à Alexandre, j'ai pris 8kg de muscle en 6 mois. Son suivi nutritionnel et ses conseils sont précieux. 
+                        Un vrai pro qui connaît son métier !"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">TC</div>
+                        <div class="author-info">
+                            <h4>Thomas C.</h4>
+                            <p>Prise de masse</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section class="booking" id="booking">
+            <div class="booking-container scroll-reveal">
+                <h2>Prêt à transformer ta vie ?</h2>
+                <p>Réserve ta première séance et commence ta transformation dès aujourd'hui</p>
+                <div class="availability-badge">
+                    <i class="fas fa-circle"></i> Disponible 7j/7 dans toute l'Île-de-France
+                </div>
+                <div class="booking-buttons">
+                    <a href="tel:+33769941881" class="cta-button">
+                        <i class="fas fa-phone"></i> Appeler maintenant
+                    </a>
+                    <a href="#booking" class="secondary-button">
+                        <i class="fas fa-calendar"></i> Voir les créneaux
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://www.snapchat.com/add/sportactif77" target="_blank"><i class="fab fa-snapchat"></i></a>
+                    <!-- <a href="#" target="_blank"><i class="fab fa-facebook"></i></a> -->
+                    <!-- <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a> -->
+                    <a href="https://wa.me/33769941881" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <p class="footer-text">
+                    © 2024 Life Coach: Training Hard. Tous droits réservés.<br>
+                    Coaching sportif professionnel en Île-de-France
+                </p>
+            </div>
+        </footer>
+
+
+        <!-- Ajouter ce code HTML juste avant la fermeture de </div> du #app -->
+
+<!-- Booking Modal -->
+<div class="booking-modal" id="bookingModal" v-if="bookingModal.show">
+    <div class="modal-content">
+        <button class="modal-close" @click="closeBookingModal">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <!-- Progress Bar -->
+        <div class="booking-progress">
+            <div class="progress-bar">
+                <div class="progress-fill" :style="{width: (bookingModal.currentStep / 5) * 100 + '%'}"></div>
+            </div>
+            <div class="progress-steps">
+                <div class="progress-step" :class="{active: bookingModal.currentStep >= 1, completed: bookingModal.currentStep > 1}">
+                    <span class="step-number">1</span>
+                    <span class="step-label">Objectif</span>
+                </div>
+                <div class="progress-step" :class="{active: bookingModal.currentStep >= 2, completed: bookingModal.currentStep > 2}">
+                    <span class="step-number">2</span>
+                    <span class="step-label">Profil</span>
+                </div>
+                <div class="progress-step" :class="{active: bookingModal.currentStep >= 3, completed: bookingModal.currentStep > 3}">
+                    <span class="step-number">3</span>
+                    <span class="step-label">Date</span>
+                </div>
+                <div class="progress-step" :class="{active: bookingModal.currentStep >= 4, completed: bookingModal.currentStep > 4}">
+                    <span class="step-number">4</span>
+                    <span class="step-label">Heure</span>
+                </div>
+                <div class="progress-step" :class="{active: bookingModal.currentStep >= 5, completed: bookingModal.currentStep > 5}">
+                    <span class="step-number">5</span>
+                    <span class="step-label">Confirmation</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 1: Objectif -->
+        <div class="booking-step" v-if="bookingModal.currentStep === 1">
+            <h2>Quel est ton objectif ?</h2>
+            <p>Sélectionne ta motivation principale pour commencer</p>
+            
+            <div class="objective-grid">
+                <div class="objective-card" 
+                     :class="{selected: bookingModal.data.objective === 'weight-loss'}"
+                     @click="selectObjective('weight-loss')">
+                    <i class="fas fa-weight"></i>
+                    <h3>Perte de poids</h3>
+                    <p>Perdre du poids de manière saine et durable</p>
+                </div>
+                <div class="objective-card" 
+                     :class="{selected: bookingModal.data.objective === 'muscle-gain'}"
+                     @click="selectObjective('muscle-gain')">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Prise de muscle</h3>
+                    <p>Développer ta masse musculaire efficacement</p>
+                </div>
+                <div class="objective-card" 
+                     :class="{selected: bookingModal.data.objective === 'fitness'}"
+                     @click="selectObjective('fitness')">
+                    <i class="fas fa-running"></i>
+                    <h3>Remise en forme</h3>
+                    <p>Améliorer ta condition physique générale</p>
+                </div>
+                <div class="objective-card" 
+                     :class="{selected: bookingModal.data.objective === 'performance'}"
+                     @click="selectObjective('performance')">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Performance sportive</h3>
+                    <p>Optimiser tes performances athlétiques</p>
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 2rem;">
+                <label>Précisions supplémentaires (optionnel)</label>
+                <textarea v-model="bookingModal.data.objectiveDetails" 
+                          placeholder="Décris tes objectifs plus en détail..."
+                          rows="3"></textarea>
+            </div>
+        </div>
+
+        <!-- Step 2: Profil Physique -->
+        <div class="booking-step" v-if="bookingModal.currentStep === 2">
+            <h2>Parle-nous de toi</h2>
+            <p>Ces informations nous aideront à personnaliser ton programme</p>
+            
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Prénom *</label>
+                    <input type="text" v-model="bookingModal.data.firstName" placeholder="Ton prénom" required>
+                </div>
+                <div class="form-group">
+                    <label>Nom *</label>
+                    <input type="text" v-model="bookingModal.data.lastName" placeholder="Ton nom" required>
+                </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" v-model="bookingModal.data.email" placeholder="ton@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Téléphone *</label>
+                    <input type="tel" v-model="bookingModal.data.phone" placeholder="06 12 34 56 78" required>
+                </div>
+                <div class="form-group">
+                    <label>Âge *</label>
+                    <input type="number" v-model="bookingModal.data.age" min="16" max="100" placeholder="25" required>
+                </div>
+                <div class="form-group">
+                    <label>Sexe</label>
+                    <select v-model="bookingModal.data.gender">
+                        <option value="">Sélectionner</option>
+                        <option value="male">Homme</option>
+                        <option value="female">Femme</option>
+                        <option value="other">Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Taille (cm)</label>
+                    <input type="number" v-model="bookingModal.data.height" placeholder="175">
+                </div>
+                <div class="form-group">
+                    <label>Poids (kg)</label>
+                    <input type="number" v-model="bookingModal.data.weight" placeholder="70">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Niveau sportif actuel</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" v-model="bookingModal.data.fitnessLevel" value="beginner">
+                        <span>Débutant</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" v-model="bookingModal.data.fitnessLevel" value="intermediate">
+                        <span>Intermédiaire</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" v-model="bookingModal.data.fitnessLevel" value="advanced">
+                        <span>Avancé</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Problèmes de santé ou blessures à signaler ?</label>
+                <textarea v-model="bookingModal.data.healthIssues" 
+                          placeholder="Allergies, blessures, conditions médicales..."
+                          rows="3"></textarea>
+            </div>
+        </div>
+
+        <!-- Step 3: Sélection Date -->
+        <div class="booking-step" v-if="bookingModal.currentStep === 3">
+            <h2>Choisis ta date</h2>
+            <p>Sélectionne le jour qui te convient</p>
+            
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button @click="previousMonth" class="calendar-nav">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h3>{{ currentMonthYear }}</h3>
+                    <button @click="nextMonth" class="calendar-nav">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="calendar-weekdays">
+                    <div v-for="day in ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim']" :key="day">
+                        {{ day }}
+                    </div>
+                </div>
+                
+                <div class="calendar-days">
+                    <div v-for="day in calendarDays" 
+                         :key="day.date"
+                         class="calendar-day"
+                         :class="{
+                             disabled: !day.available || day.isPast,
+                             selected: bookingModal.data.selectedDate === day.date,
+                             'other-month': day.otherMonth
+                         }"
+                         @click="selectDate(day)">
+                        {{ day.number }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="selected-date-display" v-if="bookingModal.data.selectedDate">
+                <i class="fas fa-calendar-check"></i>
+                Date sélectionnée : {{ formatSelectedDate }}
+            </div>
+        </div>
+
+        <!-- Step 4: Sélection Heure -->
+        <div class="booking-step" v-if="bookingModal.currentStep === 4">
+            <h2>Choisis ton créneau</h2>
+            <p>Sélectionne l'heure qui te convient pour le {{ formatSelectedDate }}</p>
+            
+            <div class="time-slots-container">
+                <div class="time-period">
+                    <h3><i class="fas fa-sun"></i> Matin</h3>
+                    <div class="time-slots">
+                        <button v-for="slot in morningSlots" 
+                                :key="slot"
+                                class="time-slot"
+                                :class="{selected: bookingModal.data.selectedTime === slot, unavailable: !isSlotAvailable(slot)}"
+                                @click="selectTime(slot)"
+                                :disabled="!isSlotAvailable(slot)">
+                            {{ slot }}
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="time-period">
+                    <h3><i class="fas fa-cloud-sun"></i> Après-midi</h3>
+                    <div class="time-slots">
+                        <button v-for="slot in afternoonSlots" 
+                                :key="slot"
+                                class="time-slot"
+                                :class="{selected: bookingModal.data.selectedTime === slot, unavailable: !isSlotAvailable(slot)}"
+                                @click="selectTime(slot)"
+                                :disabled="!isSlotAvailable(slot)">
+                            {{ slot }}
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="time-period">
+                    <h3><i class="fas fa-moon"></i> Soir</h3>
+                    <div class="time-slots">
+                        <button v-for="slot in eveningSlots" 
+                                :key="slot"
+                                class="time-slot"
+                                :class="{selected: bookingModal.data.selectedTime === slot, unavailable: !isSlotAvailable(slot)}"
+                                @click="selectTime(slot)"
+                                :disabled="!isSlotAvailable(slot)">
+                            {{ slot }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 2rem;">
+                <label>Lieu souhaité</label>
+                <select v-model="bookingModal.data.location">
+                    <option value="home">À domicile</option>
+                    <option value="outdoor">En extérieur</option>
+                    <option value="gym">En salle (si disponible)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Adresse précise (si à domicile)</label>
+                <textarea v-model="bookingModal.data.address" 
+                          placeholder="Ton adresse complète..."
+                          rows="2"></textarea>
+            </div>
+        </div>
+
+        <!-- Step 5: Confirmation -->
+        <div class="booking-step" v-if="bookingModal.currentStep === 5">
+            <h2>Récapitulatif de ta réservation</h2>
+            <p>Vérifie les informations avant de confirmer</p>
+            
+            <div class="booking-summary">
+                <div class="summary-section">
+                    <h3><i class="fas fa-user"></i> Tes informations</h3>
+                    <div class="summary-details">
+                        <p><strong>Nom :</strong> {{ bookingModal.data.firstName }} {{ bookingModal.data.lastName }}</p>
+                        <p><strong>Email :</strong> {{ bookingModal.data.email }}</p>
+                        <p><strong>Téléphone :</strong> {{ bookingModal.data.phone }}</p>
+                    </div>
+                </div>
+                
+                <div class="summary-section">
+                    <h3><i class="fas fa-target"></i> Ton objectif</h3>
+                    <div class="summary-details">
+                        <p><strong>Objectif principal :</strong> {{ getObjectiveLabel }}</p>
+                        <p v-if="bookingModal.data.objectiveDetails"><strong>Détails :</strong> {{ bookingModal.data.objectiveDetails }}</p>
+                    </div>
+                </div>
+                
+                <div class="summary-section">
+                    <h3><i class="fas fa-calendar"></i> Séance</h3>
+                    <div class="summary-details">
+                        <p><strong>Date :</strong> {{ formatSelectedDate }}</p>
+                        <p><strong>Heure :</strong> {{ bookingModal.data.selectedTime }}</p>
+                        <p><strong>Durée :</strong> 1h20</p>
+                        <p><strong>Lieu :</strong> {{ getLocationLabel }}</p>
+                        <p v-if="bookingModal.data.address"><strong>Adresse :</strong> {{ bookingModal.data.address }}</p>
+                    </div>
+                </div>
+                
+                <div class="summary-section">
+                    <h3><i class="fas fa-euro-sign"></i> Tarif</h3>
+                    <div class="summary-details">
+                        <p class="price-display">60€ <span>/ séance</span></p>
+                        <p class="price-note">Paiement sur place (espèces ou virement)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" v-model="bookingModal.data.termsAccepted">
+                    <span>J'accepte les conditions générales et la politique d'annulation (24h à l'avance)</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="modal-navigation">
+            <button v-if="bookingModal.currentStep > 1" 
+                    @click="previousStep" 
+                    class="btn-secondary">
+                <i class="fas fa-arrow-left"></i> Retour
+            </button>
+            
+            <button v-if="bookingModal.currentStep < 5" 
+                    @click="nextStep"
+                    :disabled="!canProceed"
+                    class="btn-primary">
+                Continuer <i class="fas fa-arrow-right"></i>
+            </button>
+            
+            <button v-if="bookingModal.currentStep === 5" 
+                    @click="submitBooking"
+                    :disabled="!bookingModal.data.termsAccepted || bookingModal.loading"
+                    class="btn-primary">
+                <span v-if="!bookingModal.loading">
+                    Confirmer la réservation <i class="fas fa-check"></i>
+                </span>
+                <span v-else>
+                    <i class="fas fa-spinner fa-spin"></i> Envoi en cours...
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div class="success-modal" v-if="bookingModal.success">
+    <div class="success-content">
+        <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h2>Réservation confirmée !</h2>
+        <p>Ta séance est bien enregistrée pour le {{ formatSelectedDate }} à {{ bookingModal.data.selectedTime }}</p>
+        <p>Tu vas recevoir un email de confirmation dans quelques instants.</p>
+        <button @click="closeSuccessModal" class="btn-primary">
+            Fermer
+        </button>
+    </div>
+</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
